@@ -6,7 +6,7 @@ def load_library(path)
   lib = YAML.load_file(path)
   new_data = {}
   lib.each do |key, value|
-    new_data[:name] = key
+    new_data[:name] << key
   end
   binding.pry
 end
